@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Paperclip</title>
+  <link href="https://fonts.googleapis.com/css?family=Courgette|Hammersmith+One" rel="stylesheet">
+	<link rel="stylesheet" href="index.css">
+	<!--[if IE]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js"></script>
+  <script src="https://unpkg.com/vue"></script>
+  <script src="https://unpkg.com/vuetrend"></script>
+</head>
+
+<body>
+  <div id="app">
+  	<h1>Paperclip</h1>
+    Connections Recorded
+    <h1>{{connections.length}}</h1>
+    <div class="snippet-box">
+      &ldquo;{{randomConnection}}&rdquo;
+    </div>
+    <span class="timestamp">-{{randomTime}}</span>
+    <br />
+    <br />
+    <div>
+      Growth Since Launch
+      <trend
+        :data="lineData"
+        :gradient="['#ffffff', '#ffffff']"
+        auto-draw
+        smooth>
+      </trend>
+    </div>
+  </div>
+  <div id="authors">Made by Lakshmi & Co.</div>
+  <script src="index.js"></script>
+</body>
+</html>
